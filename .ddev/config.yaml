@@ -1,4 +1,4 @@
-name: drupal-storybook
+name: spp-storybook
 type: drupal10
 docroot: web
 php_version: "8.1"
