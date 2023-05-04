@@ -1,0 +1,25 @@
+{
+  "name": "spp-storybook",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "packageManager": "yarn@3.5.0",
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@lullabot/storybook-drupal-addon": "^1.0.27",
+    "@mdx-js/react": "^1.6.22",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-docs": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-webpack5": "^6.5.16",
+    "@storybook/cli": "^6.5.16",
+    "@storybook/manager-webpack5": "^6.5.16",
+    "@storybook/server": "^6.5.16",
+    "babel-loader": "^8.3.0"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  }
+}

@@ -1,0 +1,14 @@
+# Local development services for CL Server.
+#
+parameters:
+  twig.config:
+    debug: true
+    cache: false
+  cors.config:
+    enabled: true
+    allowedHeaders: [ '*' ]
+    allowedMethods: [ ]
+    allowedOrigins: [ '*' ]
+    exposedHeaders: false
+    maxAge: false
+    supportsCredentials: true

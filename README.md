@@ -1,16 +1,17 @@
-# Composer-enabled Drupal template
+# Same Page Preview | Full repo
 
-This is Pantheon's recommended starting point for forking new [Drupal](https://www.drupal.org/) upstreams
-that work with the Platform's Integrated Composer build process. It is also the
-Platform's standard Drupal 9 upstream.
+We've set this repository up for sharing / development purposes.  It has the
+same_page_preview module included as a git repository and a Storybook driven
+component library server ready to go.
 
-Unlike with earlier Pantheon upstreams, files such as Drupal Core that you are
-unlikely to adjust while building sites are not in the main branch of the 
-repository. Instead, they are referenced as dependencies that are installed by
-Composer.
+## Installation
+We prefer to use ddev for local development.  If you don't have it installed, install it [using their documentation](https://ddev.readthedocs.io/en/stable/#installation).
 
-For more information and detailed installation guides, please visit the
-Integrated Composer Pantheon documentation: https://pantheon.io/docs/integrated-composer
+Then...
+1. Clone this repository into a directory named `spp-storybook`
+2. `cd spp-storybook && ddev composer i -W`
+3. `ddev yarn install`
+4. Run `ddev yarn storybook` and navigate to https://spp-storybook.ddev.site:6006
 
 ## Contributing
 
