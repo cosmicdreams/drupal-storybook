@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a98d20176f07527feddb32bd68da51d9",
+    "content-hash": "33890313882706de1f1c3c1fcc7078ce",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1643,6 +1643,47 @@
                     "url": "https://paypal.me/saschaeggi"
                 }
             ]
+        },
+        {
+            "name": "drupal/sdc_examples",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/sdc_examples.git",
+                "reference": "52782a542adcf02600f12a3bdc5ca47e2332e517"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "1.x-dev",
+                    "datestamp": "1683262053",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "e0ipso",
+                    "homepage": "https://www.drupal.org/user/550110"
+                }
+            ],
+            "description": "Provides example components.",
+            "homepage": "https://www.drupal.org/project/sdc_examples",
+            "support": {
+                "source": "https://git.drupalcode.org/project/sdc_examples"
+            }
         },
         {
             "name": "drush/drush",

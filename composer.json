@@ -22,7 +22,8 @@
         "drupal/cl_server": "^2.0@beta",
         "drupal/gin": "^3.0@RC",
         "drush/drush": "^11 || ^12",
-        "cweagans/composer-patches": "^1.7"
+        "cweagans/composer-patches": "^1.7",
+        "drupal/sdc_examples": "^1.0@dev"
     },
     "require-dev": {
         "drupal/core-dev": "^10.1"

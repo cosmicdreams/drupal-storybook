@@ -153,8 +153,3 @@ $settings['skip_permissions_hardening'] = TRUE;
  * the language or field module.
  */
 # $settings['config_exclude_modules'] = ['devel', 'stage_file_proxy'];
-
-# Disable caches during development. This allows finding new components without clearing caches.
-$settings['cache']['bins']['component_registry'] = 'cache.backend.null';
-# Then disallow exporting config for 'cl_server'. Instructions are at the bottom of the file.
-$settings['config_exclude_modules'] = ['devel', 'stage_file_proxy', 'cl_server'];

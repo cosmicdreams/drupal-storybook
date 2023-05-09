@@ -1,9 +1,4 @@
 {
-  "name": "spp-storybook",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "packageManager": "yarn@3.5.0",
   "devDependencies": {
     "@babel/core": "^7.21.4",
     "@lullabot/storybook-drupal-addon": "^1.0.27",
@@ -22,4 +17,5 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   }
+
 }
