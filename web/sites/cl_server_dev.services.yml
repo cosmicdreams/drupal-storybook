@@ -7,8 +7,8 @@ parameters:
   cors.config:
     enabled: true
     allowedHeaders: [ '*' ]
-    allowedMethods: [ ]
-    allowedOrigins: [ '*' ]
+    allowedMethods: [ '*' ]
+    allowedOrigins: [ 'https://drupal-storybook.ddev.site:6006', 'https://drupal-storybook.ddev.site' ]
     exposedHeaders: false
     maxAge: false
     supportsCredentials: true
