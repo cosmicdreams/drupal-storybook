@@ -10,6 +10,7 @@ export const parameters = {
     supportedDrupalThemes: {
       olivero: {title: 'Olivero'},
       claro: {title: 'Claro'},
+      umami: {title: 'Umami'},
     },
   }
   // ...

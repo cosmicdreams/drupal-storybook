@@ -7,10 +7,6 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-        {
-            "type": "path",
-            "url": "upstream-configuration"
         }
     ],
     "require": {
@@ -58,9 +54,6 @@
             "drupal/core": "-p2"
         },
         "enable-patching": true
-    },
-    "autoload": {
-        "classmap": ["upstream-configuration/scripts/ComposerScripts.php"]
     },
     "scripts": {
         "pre-update-cmd": ["DrupalComposerManaged\\ComposerScripts::preUpdate"],
