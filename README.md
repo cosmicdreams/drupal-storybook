@@ -1,15 +1,15 @@
-# Same Page Preview | Full repo
+# Single Directory Components + Drupal
 
-We've set this repository up for sharing / development purposes.  It has the
-same_page_preview module included as a git repository and a Storybook driven
-component library server ready to go.
+I have set up this repository to demonstrate a new workflow that has been made possible in Drupal 10.1 thanks to the inclusion of the single directory components (SDC).
+
+After you complete the installation process below you'll be able to create new components in Drupal.
 
 ## Installation
 We prefer to use ddev for local development.  If you don't have it installed, install it [using their documentation](https://ddev.readthedocs.io/en/stable/#installation).
 
 Then...
-1. Clone this repository into a directory named `spp-storybook`
-2. `cd spp-storybook && ddev composer i -W`
+1. Clone this repository: 'git clone https://github.com/cosmicdreams/drupal-storybook.git'
+2. `cd drupal-storybook && ddev start && ddev composer i -W`
 3. `ddev yarn install`
 4. Run `ddev yarn storybook` and navigate to https://spp-storybook.ddev.site:6006
 

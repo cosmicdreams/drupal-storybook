@@ -7,15 +7,16 @@
     "@storybook/addon-docs": "^6.5.16",
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/addon-links": "^6.5.16",
+    "@storybook/addons": "^6.5.16",
     "@storybook/builder-webpack5": "^6.5.16",
     "@storybook/cli": "^6.5.16",
     "@storybook/manager-webpack5": "^6.5.16",
     "@storybook/server": "^6.5.16",
+    "@storybook/theming": "^6.5.16",
     "babel-loader": "^8.3.0"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   }
-
 }

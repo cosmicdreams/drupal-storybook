@@ -1,10 +1,7 @@
 module.exports = {
   // Change the place where storybook searched for stories.
   stories: [
-    "../web/themes/**/*.stories.mdx",
-    "../web/themes/**/*.stories.@(json|yml)",
-    "../web/modules/**/*.stories.mdx",
-    "../web/modules/**/*.stories.@(json|yml)",
+    "../web/**/*.stories.@(mdx|json|yml)",
   ],
   // ...
   addons: [
