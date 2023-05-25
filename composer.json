@@ -1,6 +1,6 @@
 {
-    "name": "pantheon-upstreams/drupal-composer-managed",
-    "description": "Install Drupal 9 with Composer on Pantheon.",
+    "name": "drupal/drupal-storybook",
+    "description": "A demo of using storybook with drupal 10.1 and SDC.",
     "type": "project",
     "license": "MIT",
     "repositories": [
@@ -14,11 +14,9 @@
         }
     ],
     "require": {
-        "pantheon-upstreams/upstream-configuration": "dev-main",
         "composer/installers": "^2.0",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-recommended": "^10.1",
-        "pantheon-systems/drupal-integrations": "^10",
         "drupal/cl_server": "^2.0@beta",
         "drupal/gin": "^3.0@RC",
         "drush/drush": "^11 || ^12",
@@ -38,10 +36,8 @@
             "locations": {
                 "web-root": "./web"
             },
-            "allowed-packages": ["pantheon-systems/drupal-integrations"],
             "file-mapping": {
                 "[project-root]/.editorconfig": false,
-                "[project-root]/pantheon.upstream.yml": false,
                 "[project-root]/.gitattributes": false
             }
         },

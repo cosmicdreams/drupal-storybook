@@ -4,17 +4,6 @@
 # 'example.settings.local.php' file, which sits next to this file.
 parameters:
   http.response.debug_cacheability_headers: true
-  twig.config:
-    debug: true
-    cache: false
-  cors.config:
-    enabled: true
-    allowedHeaders: [ '*' ]
-    allowedMethods: [ '*' ]
-    allowedOrigins: [ 'https://drupal-storybook.ddev.site:6006', 'https://drupal-storybook.ddev.site' ]
-    exposedHeaders: false
-    maxAge: false
-    supportsCredentials: true
 services:
   cache.backend.null:
     class: Drupal\Core\Cache\NullBackendFactory

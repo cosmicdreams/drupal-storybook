@@ -9,15 +9,16 @@ We prefer to use ddev for local development.  If you don't have it installed, in
 
 Then...
 1. Clone this repository: 'git clone https://github.com/cosmicdreams/drupal-storybook.git'
-2. `cd drupal-storybook && ddev start && ddev composer i -W`
-3. `ddev yarn install`
-4. Run `ddev yarn storybook` and navigate to https://spp-storybook.ddev.site:6006
+2. Build: `cd drupal-storybook && ddev start && ddev composer i && ddev yarn`
+3. Install Drupal: `ddev drush si --account-name=admin --account-pass=admin demo_umami -y`
+3. Install modules: `ddev drush en cl_server sdc_examples -y`
+4. Login to Drupal and modify the cl_server permissions to permit anonymous users to
+4. Run `ddev yarn storybook` and navigate to https://drupal-storybook.ddev.site:6006
 
-## Contributing
+## Troubleshooting
+It's quite easy to have issues with storybook and drupal thanks to CORS.  If you have trouble loading components via this setup, please first check:
 
-Contributions are welcome in the form of GitHub pull requests. However, the
-`pantheon-upstreams/drupal-composer-managed` repository is a mirror that does not
-directly accept pull requests.
-
-Instead, to propose a change, please fork [pantheon-systems/drupal-composer-managed](https://github.com/pantheon-systems/drupal-composer-managed)
-and submit a PR to that repository.
+1. The permission for the cl_server module is set to allow anonymous users to access the component library.
+2. The CORS configuration is actually loading: `ddev drush php:eval "var_export(\Drupal::getContainer()->getParameter('cors.config'));"`
+3. Then, you can check if your component is named properly or has some other kind of error.
+4. Also, check our browser's dev console.  It usuallly has a lot of good debugging detail logged there.
