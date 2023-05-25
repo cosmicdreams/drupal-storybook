@@ -11,9 +11,10 @@ Then...
 1. Clone this repository: 'git clone https://github.com/cosmicdreams/drupal-storybook.git'
 2. Build: `cd drupal-storybook && ddev start && ddev composer i && ddev yarn`
 3. Install Drupal: `ddev drush si --account-name=admin --account-pass=admin demo_umami -y`
-3. Install modules: `ddev drush en cl_server sdc_examples -y`
-4. Login to Drupal and modify the cl_server permissions to permit anonymous users to
-4. Run `ddev yarn storybook` and navigate to https://drupal-storybook.ddev.site:6006
+4. Install modules: `ddev drush en cl_server sdc_examples -y`
+5. Login to Drupal and modify the cl_server permissions to permit anonymous users to
+![permissions.png](docs%2Fpermissions.png)
+6. Run `ddev yarn storybook` and navigate to https://drupal-storybook.ddev.site:6006
 
 ## Troubleshooting
 It's quite easy to have issues with storybook and drupal thanks to CORS.  If you have trouble loading components via this setup, please first check:
