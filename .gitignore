@@ -38,7 +38,6 @@
 # Pantheon logs
 /site-logs
 yarn-error.log
-yarn.lock
 
 # Other common rules
 # ------------------
