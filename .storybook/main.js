@@ -13,7 +13,7 @@ module.exports = {
 
   framework: {
     name: '@storybook/server-webpack5',
-    options: {}
+    options: { builder: { useSWC: true } }
   },
 
   docs: {
