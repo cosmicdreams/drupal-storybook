@@ -16,7 +16,11 @@
         "drupal/cl_server": "^2.0@beta",
         "drupal/gin": "^3.0@RC",
         "drush/drush": "^11 || ^12",
-        "cweagans/composer-patches": "^1.7"
+        "cweagans/composer-patches": "^1.7",
+        "openai-php/client": "^0.8.0",
+        "drupal/paragraphs": "^1.16",
+        "drupal/ept_core": "^1.4",
+        "drupal/ept_tabs": "^1.4"
     },
     "require-dev": {
         "drupal/core-dev": "^10.1",
@@ -69,7 +73,8 @@
             "drupal/core-composer-scaffold": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "phpstan/extension-installer": true,
-            "drupal/core-project-message": true
+            "drupal/core-project-message": true,
+            "php-http/discovery": true
         },
         "platform": {
             "php": "8.1.13"
