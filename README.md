@@ -12,9 +12,16 @@ Then...
 2. Build: `cd drupal-storybook && ddev start && ddev composer i && ddev yarn`
 3. Install Drupal: `ddev drush si --account-name=admin --account-pass=admin demo_umami -y`
 4. Install modules: `ddev drush en storybook -y`
-5. Login to Drupal and modify the cl_server permissions to permit anonymous users to
-![permissions.png](docs%2Fpermissions.png)
-6. Run `ddev yarn storybook` and navigate to https://drupal-storybook.ddev.site:6006
+5. Fix permissions for anonymous users: `ddev drush role:perm:add anonymous 'render storybook stories'`
+6. Generate stories for storybook: `ddev drush storybook:generate-all-stories`
+7. Run `ddev yarn storybook` and navigate to https://drupal-storybook.ddev.site:6006
+
+## General usage
+To prepare your modules and themes for use with storybook you'll mainly rely upon the drush command `ddev drush storybook:generate-all-stories`.  If you find yourself executing that command frequently you can automate the execute of the command by doing the following:
+1. SSH into your ddev instance: `ddev ssh`
+2. Run `watch drush storybook:generate-all-stories`
+
+The command will run when it detects file changes, or every 2 seconds.
 
 ## Troubleshooting
 ### CORS
