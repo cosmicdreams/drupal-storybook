@@ -82,3 +82,9 @@ web/.*
 
 storybook-static
 web/*/README.txt
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+*storybook.log

@@ -1,0 +1,19 @@
+# Local development services for Storybook.
+#
+parameters:
+  # ...
+  twig.config:
+    debug: true
+    cache: false
+  # Remember to disable development mode in production!
+  storybook.development: true
+  cors.config:
+    enabled: true
+    allowedHeaders: ['*']
+    allowedMethods: ['*']
+    allowedOrigins: ['*']
+    exposedHeaders: false
+    maxAge: false
+    supportsCredentials: true
+
+# ...
