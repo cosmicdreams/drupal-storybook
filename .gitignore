@@ -70,6 +70,7 @@ web/themes/custom/**/assets
 web/themes/custom/**/svg-symbols.svg
 web/themes/custom/**/bundle-stats.json
 !web/themes/custom/**/dist
+.yarn
 
 # OS X
 .DS_Store
@@ -82,3 +83,9 @@ web/.*
 
 storybook-static
 web/*/README.txt
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+*storybook.log

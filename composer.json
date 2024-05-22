@@ -11,21 +11,17 @@
     ],
     "require": {
         "composer/installers": "^2.0",
-        "drupal/core-composer-scaffold": "^10.1",
-        "drupal/core-recommended": "^10.1",
-        "drupal/cl_server": "^2.0@beta",
+        "drupal/core-composer-scaffold": "^10.2",
+        "drupal/core-recommended": "^10.2",
         "drupal/gin": "^3.0@RC",
-        "drush/drush": "^11 || ^12",
+        "drush/drush": "^12",
         "cweagans/composer-patches": "^1.7",
-        "openai-php/client": "^0.8.0",
-        "drupal/paragraphs": "^1.16",
-        "drupal/ept_core": "^1.4",
-        "drupal/ept_tabs": "^1.4"
+        "drupal/same_page_preview": "^2.1"
+
     },
     "require-dev": {
         "drupal/core-dev": "^10.1",
-        "drupal/sdc_examples": "^1.0@dev",
-        "drupal/cl_generator": "^2"
+        "drupal/storybook": "^1.0@beta"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -43,22 +39,44 @@
             }
         },
         "installer-paths": {
-            "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
-            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
-            "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
-            "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
-            "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "web/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "web/profiles/custom/{$name}": [
+                "type:drupal-custom-profile"
+            ],
+            "web/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ],
+            "web/private/scripts/quicksilver/{$name}/": [
+                "type:quicksilver-script"
+            ]
         },
         "composer-exit-on-patch-failure": true,
         "patchLevel": {
             "drupal/core": "-p2"
         },
-        "enable-patching": true
+        "enable-patching": true,
+        "patches": {
+        }
     },
     "scripts": {
         "pre-update-cmd": ["DrupalComposerManaged\\ComposerScripts::preUpdate"],
@@ -75,9 +93,6 @@
             "phpstan/extension-installer": true,
             "drupal/core-project-message": true,
             "php-http/discovery": true
-        },
-        "platform": {
-            "php": "8.1.13"
         }
     }
 }
