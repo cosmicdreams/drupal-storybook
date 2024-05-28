@@ -7,14 +7,17 @@ After you complete the installation process below you'll be able to create new c
 ## Installation
 We prefer to use ddev for local development.  If you don't have it installed, install it [using their documentation](https://ddev.readthedocs.io/en/stable/#installation).
 
-Then...
-1. Clone this repository: 'git clone https://github.com/cosmicdreams/drupal-storybook.git'
-2. Build: `cd drupal-storybook && ddev start && ddev composer i && ddev yarn`
-3. Install Drupal: `ddev drush si --account-name=admin --account-pass=admin demo_umami -y`
-4. Install modules: `ddev drush en storybook -y`
-5. Fix permissions for anonymous users: `ddev drush role:perm:add anonymous 'render storybook stories'`
-6. Generate stories for storybook: `ddev drush storybook:generate-all-stories`
-7. Run `ddev yarn storybook` and navigate to https://drupal-storybook.ddev.site:6006
+### Drupal part
+
+1. Install dependencies: `ddev drush en storybook`
+2. Fix permissions: `ddev drush role:perm:add anonymous 'render storybook stories'`
+3. Use the generator to produce stories from any compatible source: `ddev drush storybook:generate-all-stories`
+
+### Storybook part
+
+1. Update yarn: `ddev yarn`
+2. Run storybook: `ddev yarn storybook`
+3. Navigate to your storybook: https://<your-project-name>.ddev.site:6006
 
 ## General usage
 To prepare your modules and themes for use with storybook you'll mainly rely upon the drush command `ddev drush storybook:generate-all-stories`.  If you find yourself executing that command frequently you can automate the execute of the command by doing the following:
