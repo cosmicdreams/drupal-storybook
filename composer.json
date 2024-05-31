@@ -15,8 +15,7 @@
         "drupal/core-recommended": "^10.2",
         "drupal/gin": "^3.0@RC",
         "drush/drush": "^12",
-        "cweagans/composer-patches": "^1.7",
-        "drupal/same_page_preview": "^2.1"
+        "cweagans/composer-patches": "^1.7"
 
     },
     "require-dev": {
