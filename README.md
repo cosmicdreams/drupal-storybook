@@ -9,7 +9,7 @@ We prefer to use ddev for local development.  If you don't have it installed, in
 
 ### Starting from scratch
 
-You'll a working Drupal site, so here's what you would run if you are just checking out this repository
+You'll want a working Drupal site, so here's what you would run if you are just checking out this repository
 
 1. DDEV: `ddev start`
 2. Composer:  `ddev composer i`
