@@ -89,3 +89,6 @@ web/*/README.txt
 /playwright/.cache/
 
 *storybook.log
+
+# Extra DDEV stuff
+.ddev/config.local.yml

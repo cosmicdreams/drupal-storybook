@@ -1,0 +1,53 @@
+#!/bin/bash
+
+## #ddev-generated
+## Description: Launch the storybook website.
+## Usage: storybook [flags]
+## Example: "ddev storybook" or "ddev storybook start"
+
+# Define and execute command to start Storybook server
+startStorybookServer () {
+  # Command used to start storybook server
+  command="ddev npm run storybook"
+
+  # If 'yarn.lock' exists, we'll assume dev wants to use yarn package manager.
+  if test -f ./yarn.lock; then
+    command="ddev yarn storybook"
+  fi
+
+  $command;
+  exit 0;
+}
+
+# Open storybook in prefered browser. This assumes the server is running
+launch () {
+  FULLURL="${DDEV_PRIMARY_URL}:6006"
+  case $OSTYPE in
+    linux-gnu)
+      if [[ ! -z "${GITPOD_INSTANCE_ID}" ]]; then
+        gp preview ${FULLURL}
+      else
+        xdg-open ${FULLURL}
+      fi
+      ;;
+    "darwin"*)
+      open ${FULLURL}
+      ;;
+    "win*"* | "msys"*)
+      start ${FULLURL}
+      ;;
+    esac
+}
+
+
+while [ $# -gt 0 ]; do
+  case "$1" in
+  -s | --start)
+    startStorybookServer
+    shift
+    ;;
+  esac
+  shift
+done
+
+launch

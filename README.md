@@ -7,6 +7,14 @@ After you complete the installation process below you'll be able to create new c
 ## Installation
 We prefer to use ddev for local development.  If you don't have it installed, install it [using their documentation](https://ddev.readthedocs.io/en/stable/#installation).
 
+### Starting from scratch
+
+You'll a working Drupal site, so here's what you would run if you are just checking out this repository
+
+1. DDEV: `ddev start`
+2. Composer:  `ddev composer i`
+3. Drupal:  `ddev drush site:install --account-name=admin --account-pass=admin demo_umami -y`
+
 ### Drupal part
 
 1. Install dependencies: `ddev drush en storybook`
@@ -16,8 +24,8 @@ We prefer to use ddev for local development.  If you don't have it installed, in
 ### Storybook part
 
 1. Update yarn: `ddev yarn`
-2. Run storybook: `ddev yarn storybook`
-3. Navigate to your storybook: https://<your-project-name>.ddev.site:6006
+2. Run storybook and keep it running: `ddev yarn storybook`
+3. Launch Storybook in a browser: `ddev storybook`
 
 ## General usage
 To prepare your modules and themes for use with storybook you'll mainly rely upon the drush command `ddev drush storybook:generate-all-stories`.  If you find yourself executing that command frequently you can automate the execute of the command by doing the following:

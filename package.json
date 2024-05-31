@@ -1,5 +1,5 @@
 {
-  "packageManager": "yarn@4.2.2",
+  "packageManager": "yarn@1.22.22",
   "devDependencies": {
     "@chromatic-com/storybook": "^1.4.0",
     "@storybook/addon-essentials": "^8.1.5",
