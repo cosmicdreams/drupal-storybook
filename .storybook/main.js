@@ -10,12 +10,9 @@ const config = {
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
   ],
-
   framework: {
     name: "@storybook/server-webpack5",
     options: {},
   },
-
-  docs: {}
 };
 export default config;

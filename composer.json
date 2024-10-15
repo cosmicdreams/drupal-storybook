@@ -11,16 +11,18 @@
     ],
     "require": {
         "composer/installers": "^2.0",
-        "drupal/core-composer-scaffold": "^10.2",
-        "drupal/core-recommended": "^10.2",
+        "drupal/core-composer-scaffold": "^11",
+        "drupal/core-recommended": "^11",
         "drupal/gin": "^3.0@RC",
-        "drush/drush": "^12",
-        "cweagans/composer-patches": "^1.7"
+        "drush/drush": "^13",
+        "cweagans/composer-patches": "^1.7",
+        "drupal/core": "^11"
+
 
     },
     "require-dev": {
-        "drupal/core-dev": "^10.1",
-        "drupal/storybook": "^1.0@beta"
+        "drupal/core-dev": "^11",
+        "drupal/storybook": "^1.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -91,7 +93,8 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "phpstan/extension-installer": true,
             "drupal/core-project-message": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "tbachert/spi": true
         }
     }
 }
