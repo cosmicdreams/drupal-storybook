@@ -32,6 +32,8 @@ To prepare your modules and themes for use with storybook you'll mainly rely upo
 1. SSH into your ddev instance: `ddev ssh`
 2. Run `watch drush storybook:generate-all-stories`
 
+If you want to sanity-check the whole system you can enable the `fun_components` module and generate stories.  Then navigate to [the local storybook site](https://drupal-storybook.ddev.site:6006/) to see if you see "PopOver API" story.
+
 The command will run when it detects file changes, or every 2 seconds.
 
 ## Troubleshooting
