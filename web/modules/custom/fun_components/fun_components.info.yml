@@ -1,0 +1,5 @@
+name: 'Fun Components'
+type: module
+description: 'Fun components'
+package: Custom
+core_version_requirement: ^10 || ^11

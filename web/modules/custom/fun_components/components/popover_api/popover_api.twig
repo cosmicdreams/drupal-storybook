@@ -1,0 +1,14 @@
+<div {{ attributes }}>
+    {# Keep the outer div whenever possible it is a nice way to ensure the presence of "attributes" #}
+    <button popovertarget="my-popover" class="trigger-btn"> Open Popover </button>
+
+    <div id="my-popover" popover=manual data-timer="{{ delay_time }}">
+        <p>{{ modal_text }}<p>
+            <button class="close-btn" popovertarget="my-popover" popovertargetaction="hide">
+                <span aria-hidden="true">❌</span>
+                <span class="sr-only">Close</span>
+            </button>
+    </div>
+
+    <p>See something here</p>
+</div>

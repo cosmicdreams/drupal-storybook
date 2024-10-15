@@ -1,0 +1,15 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: popover-api
+status: stable
+description: This is a fun example of the popover api
+props:
+  type: object
+  properties:
+    modal_text:
+      type: string
+      title: Modal text
+      description: The short text for the modal
+    delay_time:
+      type: number
+      title: Delay time
+      description: Time before we show the modal

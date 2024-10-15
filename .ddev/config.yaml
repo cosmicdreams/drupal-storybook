@@ -1,7 +1,7 @@
 name: drupal-storybook
-type: drupal10
+type: drupal
 docroot: web
-php_version: "8.1"
+php_version: "8.3"
 webserver_type: nginx-fpm
 router_http_port: "80"
 router_https_port: "443"
@@ -10,17 +10,18 @@ additional_hostnames: []
 additional_fqdns: []
 database:
     type: mariadb
-    version: "10.4"
+    version: "10.7"
 ###############################################################################
 # Customizations
 ###############################################################################
-nodejs_version: "18"
+nodejs_version: "20"
 webimage_extra_packages:
   - pkg-config
   - libpixman-1-dev
   - libcairo2-dev
   - libpango1.0-dev
   - make
+  - xdg-utils
 hooks:
   post-start:
     - exec: echo '================================================================================='

@@ -1,0 +1,11 @@
+{% stories popover_api with { title: 'Fun Components/PopOver API' } %}
+
+    {% story default with {
+        name: '1. Default',
+    } %}
+        <div class="container">
+            {{ include('fun_components:popover_api', {modal_text: 'Text in the modal', delay_time: 7000}) }}
+        </div>
+    {% endstory %}
+
+{% endstories %}
